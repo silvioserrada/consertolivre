@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap');
+
+@theme {
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --color-charcoal: #221F1B;
+  --color-charcoal-soft: #2E2A24;
+  --color-paper: #EEEAE0;
+  --color-paper-dim: #E2DCCC;
+  --color-line: #D8D2C4;
+  --color-line-dark: #423D34;
+  --color-steel: #4B5A60;
+  --color-copper: #C97A2B;
+  --color-copper-bright: #E08A2C;
+  --color-signal: #B84332;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-paper);
+  color: var(--color-charcoal);
+}
+
+/* Blueprint-style corner ticks, used sparingly as the signature device on
+   featured/premium technician cards. */
+.corner-ticks {
+  position: relative;
+}
+.corner-ticks::before,
+.corner-ticks::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--color-copper-bright);
+  border-style: solid;
+  border-width: 0;
+}
+.corner-ticks::before {
+  top: -1px;
+  left: -1px;
+  border-top-width: 2px;
+  border-left-width: 2px;
+}
+.corner-ticks::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+}
+
+::selection {
+  background-color: var(--color-copper-bright);
+  color: var(--color-charcoal);
+}
